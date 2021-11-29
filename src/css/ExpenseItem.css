@@ -1,0 +1,46 @@
+.expense-item{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 60%;
+    height: 10vh;
+    border: 2px solidb black;
+    background-color: rgb(75, 80, 80);
+    color: floralwhite;
+    padding: 1%;
+    justify-content: space-evenly;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    margin: 1px auto;
+}
+.expense-date{
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    height: 100%;
+    background-color: rgb(31, 30, 30);
+}
+.expense-name{
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 2rem;
+    
+}
+.expense-cost{
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    height: 100%;
+    background-color:  rgb(31, 30, 30);
+}
