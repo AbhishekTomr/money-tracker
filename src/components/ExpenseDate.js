@@ -1,11 +1,15 @@
 import '../css/ExpenseDate.css'
 
-function ExpenseDate(){
+function ExpenseDate(props){
+    const date = props.date;
+    let month = date.toLocaleString('en-US',{month:'long'})
+    let day = date.toLocaleString('en-US',{day:'2-digit'})
+    let year = date.getFullYear();
     return (
         <div className="expense-datec">
-        <div className="d-month">March</div>
-        <div className="d-year">1996</div>
-        <div className="d-date">21</div>
+        <div className="d-month">{month}</div>
+        <div className="d-year">{year}</div>
+        <div className="d-date">{day}</div>
         </div>
     );
 }

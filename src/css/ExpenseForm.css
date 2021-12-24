@@ -1,0 +1,41 @@
+.expense-form{
+    border: 10px solid black;
+    display: flex;
+    width: 50%;
+    margin: 1% auto;
+    height: 30vh;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: rgb(75, 80, 80);
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 0 1%;
+    color: whitesmoke;
+    justify-content: space-around;
+    
+}
+.expense-feild{
+    display: flex;
+    margin: .5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.expense-feild label{
+    width: 30%;
+    height: 30px;
+}
+.expense-feild input{
+    width: 30%;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 3%;
+    text-align: center;
+}
+.expense-feild button{
+    width: 30%;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}

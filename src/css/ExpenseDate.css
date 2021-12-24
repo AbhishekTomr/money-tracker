@@ -7,10 +7,10 @@
 .d-month,.d-year{
     height: 20%;
     text-align: center;
-    font-size: 1rem;
+    font-size: 80%;
 }
 .d-date{
     height: 60%;
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 200%;
 }
