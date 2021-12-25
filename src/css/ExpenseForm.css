@@ -33,9 +33,42 @@
     margin-left: 3%;
     text-align: center;
 }
-.expense-feild button{
+.expense-feild button,.addExpenseButton{
     width: 30%;
-    height: 30px;
+    height: 40px;
     border-radius: 5px;
     font-size: 1.2rem;
+    margin-right: 20px;
+    background-color: whitesmoke;
+    color: black;
+    font-weight: bold;
+    border: 5px solid whitesmoke;
+    
+
+}
+.expense-feild>button:hover{
+    cursor: pointer;
+}
+input[type='date']{
+    font-size: 1rem;
+}
+.btn{
+    display: flex;
+    justify-content: flex-start;
+}
+.add-expense{
+    margin: 1% auto;
+    width: 50%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 10vh;
+    background-color: rgb(75, 80, 80);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+.addExpenseButton{
+    border: 1px solid whitesmoke
 }

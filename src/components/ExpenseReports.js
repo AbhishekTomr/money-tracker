@@ -5,7 +5,8 @@ import "../css/ExpenseReports.css"
 
 function ExpenseReports(props) {
     
-    let [dispData,setData] = useState('');
+    let [dispData,setData] = useState("2021");
+
 
     function displayFilter(data) {
         setData(data);
@@ -15,7 +16,7 @@ function ExpenseReports(props) {
     return (
         <div className="reports-status">
         <div className="reports-filter">
-         <Filter dispFilter = {displayFilter}/>
+         <Filter yearVal={dispData} sendData = {displayFilter}/>
         </div>
         <div className="reports">{dispData}</div>
         </div>

@@ -2,17 +2,21 @@ import "../css/Filter.css"
 
 function Filter(props) {
 
+    let classes = ''
+    classes = "year-filter "+props.className;
+    let defVal = new Date().getFullYear();
     function onChangeHandler(event) {
-        props.dispFilter(event.target.value);
+        props.sendData(event.target.value);
+         
     }
 
     return(
-        <select className="year-filter" onChange={onChangeHandler}>
-        <option value="2017">2017</option>
-        <option value="2018">2018</option>
-        <option value="2019">2019</option>
-        <option value="2020">2020</option>
-        <option value="2021">2021</option>
+        <select className={classes} onChange={onChangeHandler} value={props.yearVal}>
+        <option value={defVal-2}>{defVal-2}</option>
+        <option value={defVal-1}>{defVal-1}</option>
+        <option value={defVal}>{defVal}</option>
+        <option value={defVal+1}>{defVal+1}</option>
+        <option value={defVal+2}>{defVal+2}</option>
         </select>
     );
 }

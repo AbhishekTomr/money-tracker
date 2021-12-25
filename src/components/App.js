@@ -1,5 +1,6 @@
 import '../css/App.css';
 import { useState } from 'react';
+
 import Expenses from './Expenses'
 import ExpenseForm from './ExpenseForm';
 import ExpenseReports from './ExpenseReports';
@@ -7,25 +8,19 @@ import ExpenseReports from './ExpenseReports';
 function App() {
   let [yearFilter,changeYear] = useState('')
 
-  const data = [
-    {
-      date: new Date(1996,3,21),
-      name : "New TV",
-      price : 37.5
-    },
-    {
-      date: new Date(1992,4,3),
-      name : "Bike",
-      price : 80
-    },
-    {
-      date: new Date(1996,3,21),
-      name : "House",
-      price : 50000
-    }
-  ]
+  const [data,changeData] = useState([{
+    names: "Expense",
+    costs: 0,
+    dates : new Date()
+  }]);
+
   function AddItem(newItem) {
-      console.log("component App",newItem);    
+    console.log(newItem);
+    changeData(function(previousState){
+      return(
+        [newItem , ...previousState]
+      )
+    })      
   }
   let onFilterChange = function(newYear){
     changeYear(newYear);
