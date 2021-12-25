@@ -8,6 +8,8 @@ function ExpenseForm(props) {
     let [cost,setCost] = useState('');
     let [date,setDate] = useState('');
 
+    let [formState,changeFormState] = useState(false);
+
 
 function onNameChangeHandler(event) {
     setName(event.target.value);
@@ -26,7 +28,7 @@ function onSubmitHandler(event){
     let newEntry = {
         names : name,
         costs : cost,
-        dates : date
+        dates : new Date(date)
     } 
 
     props.addExpense(newEntry);
@@ -35,6 +37,25 @@ function onSubmitHandler(event){
     setDate('');
     
 }
+
+function changeStatus(){
+    if(formState){
+        changeFormState(false);
+    }
+    else{
+        changeFormState(true);
+    }
+}
+
+
+if(formState===false){
+    return(
+        <div className="add-expense">
+        <button className="addExpenseButton" onClick={changeStatus}>Add Expense</button>
+        </div>
+    )
+}
+
 
 return (
     <form className="expense-form" onSubmit={onSubmitHandler}>
@@ -50,8 +71,9 @@ return (
     <label>Expense Date :</label>
     <input type='date' onChange={onDateChangeHandler} value={date}/>
     </div>
-    <div className="expense-feild">
-    <button type='submit'>Add Expense</button>
+    <div className="expense-feild btn">
+    <button type='submit' onClick={changeStatus} >Add Expense</button>
+    <button type="button" onClick={changeStatus} >Cancel</button>
     </div>
     </form>
 );

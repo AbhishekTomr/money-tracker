@@ -1,0 +1,24 @@
+.card{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+.filter-section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-between;
+}
+.filter-section > h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    align-self: center;
+    margin-left: 1%;
+    box-sizing: border-box;
+}
+select.year-filter-card{
+    border: 2px solid whitesmoke !important;
+    border-radius: 5px !important;
+}
