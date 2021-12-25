@@ -1,0 +1,31 @@
+.BarChart{
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    width: 95%;
+    box-sizing: border-box;
+    
+}
+.bar{
+    height: 100%;
+    flex-grow: 1;
+    margin: 0;
+    
+}
+.capsule{
+    height: 80%;
+    border-bottom: 1px solid whitesmoke;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    
+}
+.fillVal{
+    background-color: thistle;
+}
+.month{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -8,14 +8,9 @@ import ExpenseReports from './ExpenseReports';
 function App() {
   let [yearFilter,changeYear] = useState('')
 
-  const [data,changeData] = useState([{
-    names: "Expense",
-    costs: 0,
-    dates : new Date()
-  }]);
+  const [data,changeData] = useState([]);
 
   function AddItem(newItem) {
-    console.log(newItem);
     changeData(function(previousState){
       return(
         [newItem , ...previousState]
@@ -26,10 +21,13 @@ function App() {
     changeYear(newYear);
   }
 
+
   return (
     <div className="App"> 
       <ExpenseForm addExpense = {AddItem}/>
-      <ExpenseReports onFilterChangeHandler={onFilterChange}/>
+      <ExpenseReports data = {data}
+      year={yearFilter}
+      onFilterChangeHandler={onFilterChange}/>
       <Expenses data = {data}
         year={yearFilter}/>
     </div>

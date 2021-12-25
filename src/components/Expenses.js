@@ -12,7 +12,6 @@ function Expenses(props){
       return(item.dates.getFullYear().toString() === year);
     })
     
-    console.log("expenses",props.year);
 
     let setFilter = function(yearValue){
       changeYear(yearValue);
@@ -25,10 +24,11 @@ function Expenses(props){
        <h3>Filter By Year :</h3>
        <Filter sendData={setFilter} yearVal = {year} className='year-filter-card'/>
      </div>
-    { 
+          {data2.length?
             data2.map(function(expItem) {
-             return <ExpenseItem item= {expItem}/>  
-          }) 
+             return <ExpenseItem key={Math.random()*100000} item= {expItem}/>  
+          }):
+          <h2 className="nodata">No Expense Data</h2> 
     }
      </Card>
     );

@@ -3,7 +3,6 @@ import ExpenseDate from "./ExpenseDate";
 
 function ExpenseItem(props){
     const data = props.item;
-    console.log(props);
     let date = data.dates;
     let title = data.names;
     let price = data.costs;

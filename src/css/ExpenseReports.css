@@ -6,6 +6,8 @@
     margin: 1% auto;
     background-color: rgb(75, 80, 80);
     box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 .reports-filter{
@@ -20,6 +22,7 @@
     height: 75%;
     width: 100%;
     color: whitesmoke;
-    font-size: 5rem;
-    text-align: center;
+    align-items: flex-end;
+    display: flex;
+    align-items: flex-end;
 }

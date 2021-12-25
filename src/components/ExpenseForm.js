@@ -26,6 +26,7 @@ function onDateChangeHandler(event) {
 function onSubmitHandler(event){
     event.preventDefault();
     let newEntry = {
+        id : Math.random() * 100000,
         names : name,
         costs : cost,
         dates : new Date(date)

@@ -22,3 +22,11 @@ select.year-filter-card{
     border: 2px solid whitesmoke !important;
     border-radius: 5px !important;
 }
+.nodata{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    width: 100%;
+}
