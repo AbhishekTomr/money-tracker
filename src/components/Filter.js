@@ -17,7 +17,7 @@ function Filter(props) {
         <option value={defVal}>{defVal}</option>
         <option value={defVal+1}>{defVal+1}</option>
         <option value={defVal+2}>{defVal+2}</option>
-        </select>
+       </select>
     );
 }
 

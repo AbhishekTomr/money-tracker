@@ -7,7 +7,6 @@ function ExpenseReports(props) {
     
     let [dispData,setData] = useState("2021");
 
-
     function displayFilter(data) {
         setData(data);
         props.onFilterChangeHandler(data);
