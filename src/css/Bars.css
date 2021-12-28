@@ -29,9 +29,22 @@
     background-color: thistle;
     border: 1px solid whitesmoke;
 }
-.month{
+.month,.short-month{
     height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.short-month{
+    display: none;
+}
+@media all and (min-width:301px) and (max-width:800px){
+    .month{
+        display: none;
+    }
+    .short-month{
+        display: flex;
+        color: whitesmoke;
+    }
+    
 }
