@@ -38,7 +38,12 @@ function App() {
   }
 
   return (
-    <div className="App">   
+    <div className="App">
+      <header className='head'>
+      <h1>Expense Manager</h1>
+      <p>Your one stop to manage all your expense</p>
+      </header>   
+      <main>
       <ExpenseForm addExpense = {AddItem}/>
       <ExpenseReports className="app-content" data = {data}
       year={yearFilter}
@@ -46,6 +51,7 @@ function App() {
       <Expenses data = {data}
         year={yearFilter}
         deleteMe = {deleteMe}/>
+      </main>
       <div className="screen-warning">
         <h2>Please increase your Screen Size</h2>
       </div>
