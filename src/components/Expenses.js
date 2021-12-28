@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import "../css/Expenses.css";
 import Card from "./Card";
 import ExpenseItem from "./ExpenseItem";
