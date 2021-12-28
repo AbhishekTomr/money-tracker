@@ -21,15 +21,17 @@ function Expenses(props){
     return(
      <Card className = "card">
      <div className="filter-section">
-       <h3>Filter By Year :</h3>
+       <h3>Filter By Year</h3>
        <Filter sendData={setFilter} yearVal = {year} className='year-filter-card'/>
      </div>
+     <div className="expense-wrap">
           {data2.length?
             data2.map(function(expItem) {
              return <ExpenseItem key={Math.random()*100000} item= {expItem} deleteMe={props.deleteMe}/>  
           }):
           <h2 className="nodata">No Expense Data</h2> 
     }
+    </div>
      </Card>
     );
     

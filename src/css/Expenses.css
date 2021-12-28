@@ -6,13 +6,12 @@
 .card{
     display: flex;
     flex-flow: column nowrap;
-    align-items: flex-end;
+    justify-content: space-evenly;
 }
 .filter-section{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%;
     justify-content: space-between;
 }
 .filter-section > h3{
@@ -22,6 +21,7 @@
     align-self: center;
     margin-left: 1%;
     box-sizing: border-box;
+    padding: 3px;
 }
 select.year-filter-card{
     border: 2px solid whitesmoke !important;
@@ -35,13 +35,31 @@ select.year-filter-card{
     height: 10vh;
     width: 100%;
 }
-@media all and (max-width:500px){
+.expense-wrap{
+    width: 100%;
+    margin: 3vh auto;
+}
+@media all and (max-width:300px){
     .card{
         display: none;
     }
 }
-@media all and (min-width:501px) and (max-width:800px){
+@media all and (min-width:301px) and (max-width:600px){
+    .card{
+        align-items: center;
+    }
+    .filter-section{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        height: 15vh;
+        width: 95%;
+        
+    }
     .filter-section > h3{
-        font-size: 1rem;
+        flex-grow: 1;
+        text-align: center;
+        width: 95%;
     }
 }

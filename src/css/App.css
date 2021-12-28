@@ -25,7 +25,7 @@
 
 }
 .head p{
-    font-size: 1rem;
+    font-size: .9rem;
     width: 100%;
 }
 main{
@@ -51,16 +51,24 @@ main{
     display: none;
 
 }
-@media all and (max-width:500px){
+@media all and (max-width:300px){
     .screen-warning{
         display: flex;
+        width: auto;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
     }
     .head,main{
         display: none;
     }
 
 }
-@media all and (min-width:501px) and (max-width:800px){
+@media all and (min-width:301px) and (max-width:800px){
+    .head{
+        height: auto;
+    }
     .head h1{
         font-size: 1.7rem;
     }
