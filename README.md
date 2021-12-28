@@ -1,1 +1,1 @@
-view this site at : https://abhishektomr.github.io/money-tracker/
+view this site at : https://abhishektomr.github.io/money-tracker

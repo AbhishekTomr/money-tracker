@@ -6,7 +6,7 @@ import Filter from "./Filter";
 
 function Expenses(props){
     let data = props.data;
-    let [year,changeYear] = useState("2021");
+    let [year,changeYear] = useState("2021")
 
     let data2 = data.filter(function(item){
       return(new Date(item.dates).getFullYear().toString() === year);
