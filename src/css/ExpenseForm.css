@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 .expense-form{
     border: 10px solid black;
     display: flex;
@@ -7,13 +12,14 @@
     flex-flow: column nowrap;
     align-items: center;
     background-color: rgb(75, 80, 80);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 0 1%;
     color: whitesmoke;
     justify-content: space-around;
+    
     
 }
 .expense-feild{
@@ -23,11 +29,11 @@
     box-sizing: border-box;
 }
 .expense-feild label{
-    width: 30%;
+    width: 50%;
     height: 30px;
 }
 .expense-feild input{
-    width: 30%;
+    width: 50%;
     height: 30px;
     border-radius: 5px;
     margin-left: 3%;
@@ -71,4 +77,41 @@ input[type='date']{
 }
 .addExpenseButton{
     border: 1px solid whitesmoke
+}
+
+@media all and (max-width:500px){
+    .expense-form,.add-expense{
+        display: none;
+    }
+}
+
+@media all and (min-width:501px) and (max-width:800px){
+    .addExpenseButton{
+        width: 90%;
+        margin: 0;
+    }
+    .add-expense{
+        padding: 0;
+    }
+    .expense-form{
+        height: auto;
+        padding: 1%;
+        font-size: 1rem;
+    }
+    .expense-feild{
+        flex-flow: column nowrap;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .expense-feild label,.expense-feild input,.expense-feild button{
+        width: 90%;
+        margin: 3px auto;
+    }
+    .btn{
+        margin-top: 5vh;
+    }   
+    .expense-feild button{
+        margin: 5px auto;
+    }
+    
 }

@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 .expense-item{
     display: flex;
     flex-flow: row nowrap;
@@ -6,7 +11,7 @@
     border: 2px solidb black;
     background-color: rgb(75, 80, 80);
     color: floralwhite;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     border: 2px solid whitesmoke;
     border-radius: 10px;
@@ -44,4 +49,11 @@
     border-radius: 10px;
     height: 90%;
     background-color:  rgb(31, 30, 30);
+}
+.delete-item{
+    margin: 1rem;
+    font-size: 1.3rem;
+}
+.delete-item:hover{
+    cursor: pointer;
 }

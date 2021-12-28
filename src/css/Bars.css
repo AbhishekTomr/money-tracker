@@ -1,3 +1,8 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 .BarChart{
     display: flex;
     flex-flow: row nowrap;

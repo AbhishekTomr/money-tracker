@@ -1,8 +1,15 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 .expense-datec{
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 .d-month,.d-year{
     height: 20%;
@@ -13,4 +20,19 @@
     height: 60%;
     text-align: center;
     font-size: 200%;
+}
+@media all and (min-width:501px) and (max-width:800px){
+    .d-year{
+        font-size: 90%;
+    }
+    .d-month{
+        font-size: 1.5vw;
+    }
+    .expense-datec{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: 3%;
+    }
 }
