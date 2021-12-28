@@ -79,6 +79,10 @@ input[type='date']{
     border: 1px solid whitesmoke
 }
 
+.invalid{
+    border: 2px solid #ed5a6e;
+}
+
 @media all and (max-width:500px){
     .expense-form,.add-expense{
         display: none;
@@ -113,5 +117,4 @@ input[type='date']{
     .expense-feild button{
         margin: 5px auto;
     }
-    
 }
