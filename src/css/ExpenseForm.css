@@ -18,15 +18,18 @@
     box-sizing: border-box;
     padding: 0 1%;
     color: whitesmoke;
-    justify-content: space-around;
-    
-    
+    justify-content: space-around;   
 }
 .expense-feild{
-    display: flex;
     margin: .5%;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.currency-feild{
+    width: 50%;
 }
 .expense-feild label{
     width: 50%;
@@ -39,6 +42,9 @@
     margin-left: 3%;
     text-align: center;
 }
+.expense-feild input[type='number']{
+    width: 80%;
+}
 .expense-feild button,.addExpenseButton{
     width: 30%;
     height: 40px;
@@ -48,8 +54,7 @@
     background-color: whitesmoke;
     color: black;
     font-weight: bold;
-    border: 5px solid whitesmoke;
-    
+    border: 5px solid whitesmoke;   
 
 }
 .expense-feild>button:hover{
@@ -78,6 +83,12 @@ input[type='date']{
 .addExpenseButton{
     border: 1px solid whitesmoke
 }
+.currency{
+    height: 27px;
+    width: 17%;
+    margin-bottom: 0;
+    border-radius: 3px;
+}
 
 .invalid{
     border: 2px solid #ed5a6e;
@@ -105,7 +116,6 @@ input[type='date']{
     .expense-feild{
         flex-flow: column nowrap;
         width: 100%;
-        justify-content: space-evenly;
     }
     .expense-feild label,.expense-feild input,.expense-feild button{
         width: 90%;
@@ -116,5 +126,25 @@ input[type='date']{
     }   
     .expense-feild button{
         margin: 5px auto;
+    }
+    .cost-feild{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+    
+    .currency{
+        width: 15%;
+        border-radius: 3px;
+    }
+
+    .currency-feild{
+        width: 90%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    .currency-feild input,.currency-feild select{
+        margin: 0;
     }
 }

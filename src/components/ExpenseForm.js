@@ -7,6 +7,7 @@ function ExpenseForm(props) {
     let [name,setName] = useState('');
     let [cost,setCost] = useState('');
     let [date,setDate] = useState('');
+    let [currency,setCurrency] = useState('');
 
     let [formState,changeFormState] = useState(false);
 
@@ -35,6 +36,10 @@ function onDateChangeHandler(event) {
     setDate(event.target.value);
 }
 
+function onCurrencyChangeHandler(event){
+    setCurrency(event.target.value);
+}
+
 function onSubmitHandler(event){
     event.preventDefault();
     if(name.trim().length===0){
@@ -52,13 +57,15 @@ function onSubmitHandler(event){
             id : Math.random() * 100000,
             names : name,
             costs : cost,
-            dates : new Date(date)
+            dates : new Date(date),
+            currency : currency
         } 
     
         props.addExpense(newEntry);
         setName('');
         setCost('');
         setDate('');
+        setCurrency('');
         changeStatus();
     }
     
@@ -91,7 +98,16 @@ return (
     </div>
     <div className="expense-feild cost-feild">
     <label>Expense Cost :</label>
+    <div className="currency-feild">
     <input type='number' step='0.5' min='0' onChange={onCostChangeHandler} value={cost} />
+    <select className="currency" onChange={onCurrencyChangeHandler}>
+    <option value='&#8377;' selected>&#8377;</option>
+    <option value='&#36;'>&#36;</option>
+    <option value='&#163;'>&#163;</option>
+    <option value='&#8369;'>&#8369;</option>
+    <option value='&#8368;'>&#8368;</option>
+    </select>
+    </div>
     </div>
     <div className="expense-feild date-feild">
     <label>Expense Date :</label>
