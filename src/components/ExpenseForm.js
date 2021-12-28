@@ -52,7 +52,7 @@ function changeStatus(){
 
 if(formState===false){
     return(
-        <div className="add-expense">
+        <div className= "add-expense">
         <button className="addExpenseButton" onClick={changeStatus}>Add Expense</button>
         </div>
     )

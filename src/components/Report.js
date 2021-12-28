@@ -45,7 +45,7 @@ function Reports(props){
     ]
 
     props.data.forEach(function(item){
-      Bar[item.dates.getMonth()].cost += Number(item.costs);  
+      Bar[new Date(item.dates).getMonth()].cost += Number(item.costs);  
     })
     let costCount = props.data.map(function(item){
         return(item.costs);

@@ -10,7 +10,8 @@ function ExpenseReports(props) {
     let [dispData,setData] = useState("2021");    
     let data = props.data;
     let filterData = data.filter(function(item){
-        return(item.dates.getFullYear().toString() === dispData.toString());
+        
+        return(new Date(item.dates).getFullYear().toString() === dispData.toString());
     })
     
     function displayFilter(data) {

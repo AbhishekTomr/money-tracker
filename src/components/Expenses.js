@@ -9,7 +9,7 @@ function Expenses(props){
     let [year,changeYear] = useState("2021");
 
     let data2 = data.filter(function(item){
-      return(item.dates.getFullYear().toString() === year);
+      return(new Date(item.dates).getFullYear().toString() === year);
     })
     
 
@@ -26,7 +26,7 @@ function Expenses(props){
      </div>
           {data2.length?
             data2.map(function(expItem) {
-             return <ExpenseItem key={Math.random()*100000} item= {expItem}/>  
+             return <ExpenseItem key={Math.random()*100000} item= {expItem} deleteMe={props.deleteMe}/>  
           }):
           <h2 className="nodata">No Expense Data</h2> 
     }
