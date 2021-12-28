@@ -29,7 +29,7 @@ function App() {
   
   let deleteMe = function(id){
     let index = data.findIndex(function(item){
-       return (item.id == id)
+       return (item.id === id)
     })
     if(index !== (-1))
     {

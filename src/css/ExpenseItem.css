@@ -51,9 +51,24 @@
     background-color:  rgb(31, 30, 30);
 }
 .delete-item{
-    margin: 1rem;
-    font-size: 1.3rem;
+    margin: 3%;
+    font-size: 1.5rem;
 }
 .delete-item:hover{
     cursor: pointer;
+}
+@media all and (min-width:501px) and (max-width:800px){
+    .expense-name{
+        width: 40%;
+        font-size: 1rem;
+        align-items: flex-start;
+        text-align: left;
+        padding: 5px;
+    }
+    .delete-item{
+        font-size: 1rem;
+    }
+    .expense-date{
+        width: 30%;
+    }
 }
