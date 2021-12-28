@@ -6,13 +6,12 @@ import ExpenseForm from './ExpenseForm';
 import ExpenseReports from './ExpenseReports';
 
 function App() {
-  let [yearFilter,changeYear] = useState('')
   if(!localStorage.getItem('data'))
   {
     localStorage.setItem('data',JSON.stringify([]));
   }
-  const [data,changeData] = useState(JSON.parse(localStorage.getItem('data')));
-
+  let [data,changeData] = useState(JSON.parse(localStorage.getItem('data')));
+  let [yearFilter,changeYear] = useState('')
 
   function AddItem(newItem) {
     changeData(function(previousState){
@@ -21,7 +20,7 @@ function App() {
       )
     })
     let newValue = [newItem,...data]
-    localStorage.setItem('data',JSON.stringify(newValue));   
+    localStorage.setItem('data',JSON.stringify(newValue)); 
   }
   let onFilterChange = function(newYear){
     changeYear(newYear);
@@ -31,21 +30,11 @@ function App() {
     let index = data.findIndex(function(item){
        return (item.id === id)
     })
-    if(index !== (-1))
-    {
-      let temp = data;
-      temp.splice(index,1);
-      localStorage.setItem('data',JSON.stringify(temp));
-    
-    }
-    if(index !== (-1))
-    {
-      changeData(function(previousState){
-        return(
-          data.splice(index,1)
-        )
-      })
-    }
+
+    let newData = JSON.parse(localStorage.getItem('data'));
+    newData.splice(index,1);
+    localStorage.setItem('data',JSON.stringify(newData));
+    changeData(newData);
   }
 
   return (
